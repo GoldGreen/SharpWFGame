@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E433564-B1F2-42BB-8E6D-2B72F7CFD207}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GameNewEra</RootNamespace>
+    <AssemblyName>GameNewEra</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HeroAndEnemy\EnemyBattle.cs" />
+    <Compile Include="HeroAndEnemy\IBattle.cs" />
+    <Compile Include="HeroAndEnemy\MainHeroBattle.cs" />
+    <Compile Include="MainHierarchy\MovableObjectcs.cs" />
+    <Compile Include="MainHierarchy\ObjectWithAnimation.cs" />
+    <Compile Include="HeroEnemyPict.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HeroEnemyPict.resx</DependentUpon>
+    </Compile>
+    <Compile Include="HeroAndEnemy\BattleEventArgs.cs" />
+    <Compile Include="MainHierarchy\MainObject.cs" />
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MapAndSystem\Map.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapAndSystem\Map.Designer.cs">
+      <DependentUpon>Map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapAndSystem\Inventar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapAndSystem\Inventar.Designer.cs">
+      <DependentUpon>Inventar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapAndSystem\Location.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MapAndSystem\Location.Designer.cs">
+      <DependentUpon>Location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualNature.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VisualNature.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="HeroEnemyPict.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HeroEnemyPict.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MapAndSystem\Map.resx">
+      <DependentUpon>Map.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualNature.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>VisualNature.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapAndSystem\Inventar.resx">
+      <DependentUpon>Inventar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapAndSystem\Location.resx">
+      <DependentUpon>Location.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\MH0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\MH45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\MH90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\MH135.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\MH180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\MH225.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\MH270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\MH315.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Space0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Space45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Space90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Space135.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Space180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Space225.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Space270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Space315.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBlue0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBlue45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBlue90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBlue135.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBlue180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBlue225.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBlue270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBlue315.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VisualNature\BackGround1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBig0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBig45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBig90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBig135.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBig180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBig225.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBig270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceBig315.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpacePurple0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpacePurple45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpacePurple90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpacePurple135.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpacePurple180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpacePurple225.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpacePurple270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpacePurple315.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VisualNature\Cursor_clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceOrange0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceOrange45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceOrange90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceOrange135.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceOrange180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceOrange225.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceOrange270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\SpaceOrange315.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VisualNature\Map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VisualNature\RedSystem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VisualNature\RedStar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VisualNature\BlueSystem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Boss0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Boss45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Boss90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Boss135.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Boss180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Boss225.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Boss270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainHeroAnimationPicture\Boss315.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
